@@ -1,0 +1,54 @@
+@import 'vendors/reset.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: greenyellow;
+}
+
+
+
+.main__infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p:after {
+        content: url(./../leaf.png);
+    }
+
+    p {
+        color: red;
+    }
+
+    h2 {
+        font-weight: 700;
+    }
+}
+
+
+header {
+    img {
+        border: 6px solid rgb(224, 255, 47);
+    }
+
+    p {
+        background-color: rgb(224, 255, 47);
+    }
+
+    margin: 0 4%;
+}
+
+main {
+    display: flex;
+    margin: 2% 2%;
+    align-items: center;
+
+    p:nth(first-child) {}
+}
