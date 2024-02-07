@@ -1,5 +1,15 @@
 @import 'vendors/reset.scss';
 
+@mixin landscape {
+    @media (orientation: landscape) {
+      @content;
+    }
+  }
+
+:root {
+    --border_gradient_color : #FDEB00;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -13,8 +23,17 @@ img {
 body {
     background-color: #9ACD32; 
     // border: 6px solid #FDEB00;
+    border:  6px solid var(--border_gradient_color);
+
+ 
 }
 
+.card {
+    @include landscape{
+        display: flex;
+        margin: 10% 0 6% 0;
+    }
+}
 
 
 .main__infos {
@@ -39,12 +58,13 @@ body {
 header {
 
     img {
-        border: 6px solid #FDEB00;
+        border: 6px solid var(--border_gradient_color);
     }
 
-    > p {
-        background-color: #FDEB00;
+    p:nth-child(4) {
+        background-color: var(--border_gradient_color);
         margin-bottom: 15%;
+        font-size: 0.95rem;
     }
 
     margin: 0 4%;
@@ -52,7 +72,7 @@ header {
 
 main {
     display: flex;
-    margin: 2% 2% 30% 2%;
+    margin: 2% 2% 15.5% 2%;
     align-items: center;
 
     p {
@@ -64,6 +84,7 @@ main {
         font-weight: bold;
     }
 }
+
 
 footer {
     text-align: center;
@@ -83,7 +104,7 @@ footer {
     }
 
     p {
-        border: 3px solid #FDEB00;
+        border: 3px solid var(--border_gradient_color);
         font-size: 0.9rem;
         margin: 3%;
     }
@@ -96,3 +117,4 @@ footer {
 .retraite::after {
     content: url(./../normal.png);
 }
+
